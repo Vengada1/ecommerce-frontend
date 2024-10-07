@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./CSS/LoginSignup.css";
-import { backend_url } from "../App";
 
 const LoginSignup = () => {
 
@@ -13,7 +12,7 @@ const LoginSignup = () => {
 
   const login = async () => {
     let dataObj;
-    await fetch({backend_url}, {
+    await fetch('http://localhost:4000/login', {
       method: 'POST',
       headers: {
         Accept:'application/form-data',
@@ -36,7 +35,7 @@ const LoginSignup = () => {
 
   const signup = async () => {
     let dataObj;
-    await fetch({backend_url}, {
+    await fetch('http://localhost:4000/signup', {
       method: 'POST',
       headers: {
         Accept:'application/form-data',
